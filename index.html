@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Deepika Valluri : Clinical Dietitian/Nutritionist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Clinical Dietitian/Nutritionist">
+    <meta name="keywords" content="dietitian nutritionist diet tips healthy life consult">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -webkit-pictograph;
+        }
+
+        html,
+        body,
+        article {
+            height: 100%;
+        }
+
+        aside {
+            width: 100%;
+            max-width: 300px;
+            padding: 5px 10px;
+            height: 100%;
+            /* position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0; */
+        }
+
+        main {
+            /* margin-left: 300px; */
+            padding: 5px 10px;
+            width: 100%;
+        }
+
+        p {
+            padding: 5px 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* img.author {
+            margin: 5px auto;
+        } */
+
+        .d-block {
+            display: block;
+        }
+
+        .bg-grey {
+            background-color: #e2e2e2;
+        }
+
+        .fs-l {
+            font-size: large;
+        }
+
+        .fs-xl {
+            font-size: x-large;
+        }
+
+        .fs-xxl {
+            font-size: xx-large;
+        }
+
+        .fw-normal {
+            font-weight: normal;
+        }
+
+        .p-1 {
+            padding: .5rem;
+        }
+
+        .mt-1 {
+            margin-top: .5rem;
+        }
+
+        .mb-1 {
+            margin-bottom: .5rem;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .d-flex.h-align-between {
+            justify-content: space-between;
+        }
+
+        .d-flex.wrappable {
+            flex-wrap: wrap;
+        }
+
+        .border-rounded {
+            border-radius: 50%;
+        }
+
+        .text-primary {
+            color: crimson;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        li.card {
+            list-style-type: none;
+            border: 1px solid crimson;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: crimson;
+            background-color: white;
+        }
+
+        li.card:hover {
+            background-color: #ed143dc7;
+            color: white
+        }
+
+        li.card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* .show-on-smaller-devices {
+            display: none !important;
+        } */
+
+        @media screen and (max-width: 380px) {
+            article.d-flex {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100vw;
+                max-width: none;
+            }
+
+
+
+            /* .show-on-smaller-devices {
+                display: block;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <article class="d-flex">
+        <aside class="bg-grey">
+            <header>
+                <img src="images/author.jpg" alt="author image" height="200" class="border-rounded  author">
+                <h1 class="fs-xxl fw-normal mb-1 mt-1 text-primary">Deepika Valluri</h1>
+                <h3 class="fw-normal text-primary mt-1 mb-1">Clinical Dietitian/Nutritionist</h3>
+            </header>
+            <section>
+                <p>
+                    Hello. I am a professional dietitian, having 3+ years of proven experience in preparing Diet Charts
+                    and Therapeutic diet plans.
+                </p>
+                <p>
+                    Also delivered various health talks and nutrition sessions in person and in print media as well.
+                </p>
+                <p>
+                    I currently work at Apollo Hospitals, Hyderabad.
+                </p>
+            </section>
+            <!-- <section>
+                <a href="mailto:ditetitian.deepika@gmail.com">📧</a>
+            </section> -->
+            <!-- <section class="show-on-smaller-devices">
+                <ul id="publishings">
+
+                </ul>
+            </section> -->
+        </aside>
+        <main>
+            <h1 class="mt-1 mb-1">My Publishings</h4>
+                <ul id="publishings">
+
+                </ul>
+        </main>
+    </article>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const publishingsArray = [
+                {
+                    title: 'Replace Artificial Supplemnets with Natural diet',
+                    url: 'http://medadvice.in/replace-artificial-supplements-with-natural-diet',
+
+                },
+                {
+                    title: 'Debunking the myths',
+                    url: 'https://www.hybiz.tv/world-vegetarian-day-debunking-the-myths/'
+                },
+                {
+                    title: 'Physical & Mental development relates to the quality of food intake',
+                    url: 'https://saradhy.com/physical-and-mental-development-relates-to-the-quality-of-food-intake/'
+                },
+                {
+                    title: 'Iodine deficiency effecting IQ levels',
+                    url: 'https://toofandaily.in/iodine-deficiency-can-cause-low-iq-levels/'
+                },
+                {
+                    title: 'Myths & Facts around Veganism',
+                    url: 'http://medadvice.in/myths-and-facts-around-veganism'
+                },
+                {
+                    title: 'Replace artifical supplements with natural diet',
+                    url: 'https://itshealthcare.in/2020/12/19/replacing-artificial-supplements-with-natural-diet/'
+                }
+            ]
+            const publishings = document.querySelector('#publishings');
+            publishingsArray.forEach(article => {
+                const listElm = document.createElement('li');
+                listElm.classList.add('p-1');
+                listElm.classList.add('card');
+                const linkElm = document.createElement('a');
+                linkElm.setAttribute('href', article.url);
+                linkElm.setAttribute('title', article.url);
+                linkElm.classList.add('fs-l');
+                linkElm.text = article.title;
+                listElm.appendChild(linkElm);
+                publishings.appendChild(listElm)
+            })
+        })
+    </script>
+</body>
+
+</html>
